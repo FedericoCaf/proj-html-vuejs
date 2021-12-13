@@ -5,7 +5,7 @@
             <div class="jumbo-left col-7">
               <h1>Unlock Your Online Growth Potential</h1>
               <h4>Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.</h4>
-              <button>Our Service <i class="fas fa-arrow-right"></i> </button>
+              <button class="fc-btn-our-services">Our Service <i class="fas fa-arrow-right"></i> </button>
             </div>
             <div class="jumbo-right col-5">
                <div class="contact-card">
@@ -19,7 +19,7 @@
                     <input type="text" placeholder="Your Name*">
                     <input type="text" placeholder="Your Email*">
                     <input type="text" placeholder="Your Phone Number*">
-                    <button> Get a Callback </button>
+                    <button class="fc-callback"> Get a Callback </button>
                     <p>By submitting my data I agree to be contacted</p>
     
                </div>
@@ -54,11 +54,10 @@ export default {
 
 .jumbo-left{
   height: 300px;
-  // background-color: lightpink;
   color: white;
-   button{
+   .fc-btn-our-services{
      border: none;
-     border-radius: 5px;
+     border-radius: 15px;
      background-color: white;
      color: black;
      padding: 25px;
@@ -81,7 +80,7 @@ export default {
 
 .jumbo-right{
   height: 300px;
-  // background-color:lightslategrey;
+  padding-left: 70px;
 }
 
 .contact-card{
@@ -116,12 +115,12 @@ export default {
      margin: 10px;
      outline: none;
    }
-   button{
+   .fc-callback{
      width: 90%;
      margin-top: 20px;
      padding: 10px;
      border: none;
-     border-radius: 25px;
+     border-radius: 10px;
      background-color: $primary-color;
      color: white;
    }

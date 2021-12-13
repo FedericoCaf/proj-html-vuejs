@@ -6,6 +6,8 @@
 
   <Jumbosection/>
 
+  <Svgsection/>
+
 
  </div>
 
@@ -18,13 +20,15 @@
 
 import Header from './components/Header.vue';
 import Jumbosection from './components/Jumbosection.vue';
+import Svgsection from './components/Svgsection.vue';
 
 export default {
   name: 'App',
 
   components: {
     Header,
-    Jumbosection
+    Jumbosection,
+    Svgsection
   }
 }
 </script>
