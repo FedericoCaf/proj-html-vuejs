@@ -1,24 +1,23 @@
 <template>
   <header class="container">
-    <div class="row d-flex">
+    <div class="row d-flex justify-content-between">
 
-      <div class="logo-header col-2 d-flex align-items-center">
+      <div class="logo-header d-flex align-items-center">
         <img src="../assets/img/avada-marketing-logo.png" alt="logo">
       </div>
-      <ul class="d-flex align-items-center justify-content-between col-6">
 
-       <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i> </li>
-       <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i></li>
-       <li> <a href=""> ciao </a> </li>
-       <li> <a href=""> ciao </a> </li>
-       <li> <a href=""> ciao </a> </li>
-       <li> <a href=""> ciao </a> </li>
-      
-     
+      <ul class="d-flex align-items-center justify-content-between">
+        <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i> </li>
+        <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i></li>
+        <li> <a href=""> ciao </a> </li>
+        <li> <a href=""> ciao </a> </li>
+        <li> <a href=""> ciao </a> </li>
+        <li> <a href=""> ciao </a> </li>
       </ul>
-      <div class="phone-contact col-4 d-flex justify-content-around align-items-center">
+
+      <div class="phone-contact d-flex justify-content-around align-items-center">
          <a href="#"> <i class="fas fa-phone-alt"> <span> (555) 802-1234 </span> </i></a> 
-         <button>ciao</button>
+         <button>Free Quote</button>
       </div>
 
     </div>
@@ -41,10 +40,11 @@ export default {
 @import '../assets/style/vars.scss';
 
  header{
-   height: 70px;
-   background-color: aqua;
+   height: 100px;
+   font-size: 23px;
      .logo-header{
-       height: 70px;
+       height: 100px;
+       width: 270px;
         img{
           width: 100%;
           padding-top: 4px;
@@ -52,7 +52,8 @@ export default {
         }
      }
      .phone-contact{
-       height: 70px;
+       height: 100px;
+       width: 400px;
         button{
           height: 50%;
           width: 150px;
@@ -73,14 +74,17 @@ export default {
 
      ul{
       //  background-color: crimson;
-       height: 70px;
+       height: 100px;
+       width: calc(100% - 700px);
          li{
-           height: 35px;
+          font-size: 23px;
+          padding-right: 7px;
            line-height: 35px;
            border-bottom: 2px solid transparent;
              a{
                text-decoration: none;
                color: black;
+               padding: 15px;
              }
              
              .fa-chevron-down{
