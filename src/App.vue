@@ -1,12 +1,17 @@
 <template>
  <div class="div">
 
-
   <Header/>
 
   <Jumbosection/>
 
   <Svgsection/>
+
+  <Brands/>
+
+  <CaseStudies/>
+
+  <Footer/>
 
 
  </div>
@@ -21,6 +26,9 @@
 import Header from './components/Header.vue';
 import Jumbosection from './components/Jumbosection.vue';
 import Svgsection from './components/Svgsection.vue';
+import Brands from './components/Brands.vue';
+import CaseStudies from './components/CaseStudies.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -28,7 +36,10 @@ export default {
   components: {
     Header,
     Jumbosection,
-    Svgsection
+    Svgsection,
+    Brands,
+    CaseStudies,
+    Footer
   }
 }
 </script>
@@ -36,6 +47,6 @@ export default {
 <style lang="scss">
 
 @import './assets/style/vars.scss';
-@import './assets/style/generals.scss'
+@import './assets/style/generals.scss';
 
 </style>

@@ -11,7 +11,7 @@
             Business Growth
           </h5>
           <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem, totam modi! Qui, a minima quia obcaecati dicta alias ratione iusto.
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem
           </p>
           <button class="fc-button-orange">Get a consultation</button>
       </div>
@@ -19,11 +19,11 @@
     <div class="row">
        <div class="col-6 text-container">
          <h5>
-            <i class="fas fa-circle fc-blue"></i> 
+            <i class="fas fa-circle fc-yellow"></i> 
             Business Growth
           </h5>
           <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem, totam modi! Qui, a minima quia obcaecati dicta alias ratione iusto.
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem.
           </p>
           <button class="fc-button-orange">Get a consultation</button>
        </div>
@@ -37,11 +37,11 @@
        </div>
       <div class="col-6 text-container">
          <h5>
-            <i class="fas fa-circle fc-blue"></i> 
+            <i class="fas fa-circle fc-green"></i> 
             Business Growth
           </h5>
           <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem, totam modi! Qui, a minima quia obcaecati dicta alias ratione iusto.
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem.
           </p>
           <button class="fc-button-orange">Get a consultation</button>
       </div>
@@ -65,8 +65,8 @@ export default {
 @import '../assets/style/generals.scss';
 
 .svg-container{
-  height: 500px;
-  margin-top: 70px;
+  height: 600px;
+  margin-top: 100px;
   // background-color: lightskyblue;
    img{
      height: 100%;
@@ -75,15 +75,27 @@ export default {
 
 .text-container{
    padding: 100px;
-   height: 500px;
-   margin-top: 70px;
-  //  background-color: rgb(56, 107, 138);
+   height: 600px;
+   margin-top: 100px;
+   h1{
+     font-size: 50px;
+     font-weight: 700;
+   }
+    p{
+      font-size: 25px;
+    }
+  
     .fc-button-orange{
       width: 50%;
     }
-    .fa-circle .fc-blue{
+    .fa-circle.fc-blue{
       color: #0064FE;
-      font-size: 25px;
+    }
+    .fa-circle.fc-yellow{
+      color: #F8CC23;
+    }
+    .fa-circle.fc-green{
+      color: #3BC77B;
     }
 }
 

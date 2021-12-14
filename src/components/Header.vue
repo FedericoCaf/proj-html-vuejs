@@ -17,7 +17,7 @@
 
       <div class="phone-contact d-flex justify-content-around align-items-center">
          <a href="#"> <i class="fas fa-phone-alt"> <span> (555) 802-1234 </span> </i></a> 
-         <button>Free Quote</button>
+         <button class="btn-free-quote">Free Quote</button>
       </div>
 
     </div>
@@ -54,14 +54,14 @@ export default {
      .phone-contact{
        height: 100px;
        width: 400px;
-        button{
-          height: 50%;
-          width: 150px;
-          border: none;
-          border-radius: 5px;
-          background-color: lighten( $primary-color, 35% );
-          color: $primary-color;
-        }
+        // .btn-free-quote{
+        //   height: 50%;
+        //   width: 150px;
+        //   border: none;
+        //   border-radius: 5px;
+        //   background-color: lighten( $primary-color, 35% );
+        //   color: $primary-color;
+        // }
         .fa-phone-alt{
           color: $primary-color;
            span{

@@ -2,12 +2,12 @@
   <div class="container-jumbo">
       <div class="container">
         <div class="row inner-container d-flex align-items-center">
-            <div class="jumbo-left col-7">
+            <div class="jumbo-left col-6">
               <h1>Unlock Your Online Growth Potential</h1>
               <h4>Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.</h4>
-              <button class="fc-btn-our-services">Our Service <i class="fas fa-arrow-right"></i> </button>
+              <button class="fc-btn-our-services">Our Services <i class="fas fa-arrow-right"></i> </button>
             </div>
-            <div class="jumbo-right col-5">
+            <div class="jumbo-right col-6">
                <div class="contact-card">
                  <div class="img-card-top">
                     <img src="../assets/img/marketing-consultant-expert.jpg" alt="consultant">
@@ -57,10 +57,11 @@ export default {
   color: white;
    .fc-btn-our-services{
      border: none;
+     margin-top: 20px;
      border-radius: 15px;
      background-color: white;
      color: black;
-     padding: 25px;
+     padding: 15px;
      width: 300px;
      font-size: 25px;
       i{
@@ -68,12 +69,12 @@ export default {
       }
    }
    h1{
-     font-size: 80px;
+     font-size: 65px;
      font-weight: 700;
      color: white;
    }
    h4{
-     font-size: 35px;
+     font-size: 30px;
      margin: 30px 0;
    }
 }
