@@ -65,7 +65,7 @@ export default {
     max-width: 400px;
     h3{
       margin-top: 20px;
-      font-size: 32px;
+      font-size: 30px;
     }
     h2{
       margin-top: 20px;

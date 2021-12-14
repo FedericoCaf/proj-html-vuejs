@@ -11,13 +11,14 @@
 
   <CaseStudies/>
 
+  <Boostsection/>
+
+  <Marketing/>
+
   <Footer/>
 
 
  </div>
-
-
-  
 
 </template>
 
@@ -28,6 +29,8 @@ import Jumbosection from './components/Jumbosection.vue';
 import Svgsection from './components/Svgsection.vue';
 import Brands from './components/Brands.vue';
 import CaseStudies from './components/CaseStudies.vue';
+import Boostsection from './components/Boostsection.vue';
+import Marketing from './components/Marketing.vue';
 import Footer from './components/Footer.vue';
 
 export default {
@@ -39,6 +42,8 @@ export default {
     Svgsection,
     Brands,
     CaseStudies,
+    Boostsection,
+    Marketing,
     Footer
   }
 }
