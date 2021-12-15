@@ -1,5 +1,8 @@
 <template>
-  <header class="container">
+  <header class="container global-wrapper">
+    <div class="fc-hamb text-center">
+       <i class="fas fa-bars"></i>
+    </div>
     <div class="row d-flex justify-content-between">
 
       <div class="logo-header d-flex align-items-center">
@@ -46,6 +49,10 @@ export default {
 
 @import '../assets/style/vars.scss';
 
+.global-wrapper{
+  position: relative;
+}
+
  header{
    height: 100px;
    font-size: 20px;
@@ -58,6 +65,24 @@ export default {
           cursor:pointer;
         }
      }
+
+      .fc-hamb{
+     position: absolute;
+     display: none;
+     cursor: pointer;
+     right: 15px;
+     top:20px;
+     border-radius: 7px;
+     font-size: 18px;
+     width: 60px;
+     height: 60px;
+     background-color: white;
+     padding-top: 9px;
+     box-shadow: 5px 5px 35px -15px;
+      i{
+        font-size: 35px;
+      }
+   }
      .phone-contact{
        height: 100px;
        width: 400px;
@@ -76,7 +101,6 @@ export default {
      }
 
      ul{
-      //  background-color: crimson;
        height: 100px;
        width: calc(100% - 700px);
        margin-bottom: 0 !important;
@@ -111,6 +135,33 @@ export default {
            color: $primary-color;
          }
       }
+ }
+
+ @media (max-width:1400px){
+   header{
+     ul li{
+       font-size: 15px;
+     }
+   }
+ }
+
+ @media (max-width:1199px){
+ header{
+   ul li{
+     display: none;
+   }
+   .phone-contact a{
+     display: none;
+   }
+
+   .fc-hamb{
+     display: block;
+   }
+  
+ }
+
+  
+   
  }
 
 </style>
