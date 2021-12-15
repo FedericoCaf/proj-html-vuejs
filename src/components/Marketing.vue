@@ -25,6 +25,7 @@
 
          <div v-for="(article, index) in articles" :key="index" class="col-4">
            <div class="marketing-img">
+             <div class="fc-overlay"></div>
              <img :src="article.img" :alt="article.title">
            </div>
            <h3> {{article.title}} </h3>
@@ -102,7 +103,31 @@ export default {
 .img-blog-section{
   margin-top: 100px;
    .marketing-img{
+     position: relative;
      margin-bottom: 20px;
+     cursor: pointer;
+        .fc-overlay{
+         position: absolute;
+         width: 400px;
+         height: 267px;
+         top: 0;
+         left: 0;
+         background-image: linear-gradient(to top, rgba(247, 98, 16, 0.5), transparent);
+         z-index: 999;
+         transition: all 1s;
+         opacity: 0;
+      }
+
+      .fc-overlay:hover{
+        opacity: 1;
+      }
+   }
+   h3{
+     transition: all 0.5s;
+     cursor: pointer;
+   }
+   h3:hover{
+    color: $primary-color;
    }
 }
 

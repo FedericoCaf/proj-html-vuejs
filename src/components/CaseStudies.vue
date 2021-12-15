@@ -10,6 +10,7 @@
        <div v-for="(item, index) in cases" :key="index" 
             class="inner-container-case">
             <div v-if="(index < 3)" class="inside-case">
+              <div class="fc-overlay"></div>
                 <div class="img-cases">
                   <img :src="item.img" :alt="item.comment">
                 </div>
@@ -86,6 +87,11 @@ export default {
     h3{
       margin-top: 20px;
       font-size: 30px;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+    h3:hover{
+      color: $primary-color;
     }
     h2{
       margin-top: 20px;
@@ -104,6 +110,25 @@ export default {
     font-size: 18px;
   }
 
+  .inside-case{
+    position: relative;
+  
+      .fc-overlay{
+         position: absolute;
+         width: 400px;
+         height: 450px;
+         top: 0;
+         left: 0;
+         background-image: linear-gradient(to top, rgba(247, 98, 16, 0.5), transparent);
+         z-index: 999;
+         transition: all 1s;
+         opacity: 0;
+      }
+
+      .fc-overlay:hover{
+        opacity: 1;
+      }
+  }
 
 }
 

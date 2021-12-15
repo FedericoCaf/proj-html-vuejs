@@ -205,9 +205,17 @@ export default {
    ul{
      padding-left: 0 !important;
    }
+
+    li{
+     font-size: 20px;
+   }
     li:not(:first-child){
       padding-top: 20px;
       cursor: pointer;
+      transition: all 0.5s;
+    }
+    li:hover:not(:first-child){
+      color: $primary-color;
     }
 }
 
