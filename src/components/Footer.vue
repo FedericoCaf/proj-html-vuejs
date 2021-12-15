@@ -63,7 +63,7 @@
                <li>Sales development</li>
                <li>Digital Marketing</li>
                <li>Pricing</li>
-               <li>Wht Us</li>
+               <li>Why Us</li>
                <li>Cases Studies</li>
              </ul>
              <p>Call Us (555) 802-1234</p>
@@ -92,6 +92,9 @@
      </div>
    </div>
  
+ <div class="chat-icon d-flex justify-content-end">
+   <i class="far fa-comment-alt"></i>
+ </div>
 
  </footer>
 </template>
@@ -105,7 +108,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/vars.scss';
 
-
 .container-jumbo{
   padding: 70px;
   background-color: black;
@@ -115,19 +117,10 @@ export default {
 .jumbo-left{
   padding-right: 50px;
   color: white;
-   .fc-btn-our-services{
-     border: none;
-     margin-top: 20px;
-     border-radius: 15px;
-     background-color: white;
-     color: black;
-     padding: 15px;
-     width: 300px;
-     font-size: 25px;
-      i{
-        margin-left: 5px;
-      }
+    h5{
+     font-style: italic;
    }
+
    h1{
      font-size: 65px;
      font-weight: 700;
@@ -230,7 +223,15 @@ export default {
   i{
     padding: 30px 30px 30px 0;
     font-size: 20px;
+    cursor: pointer;
   }
+}
+
+.chat-icon{
+ margin-right: 20px;
+   i{
+     font-size: 35px;
+   }
 }
 
 

@@ -5,34 +5,20 @@
         <h1>Trusted by Leading Organizations</h1>
     </div>
 
-
      <div class="container-cases d-flex justify-content-between">
 
-       <div class="inner-container-case">
-          <div class="img-cases">
-           <img src="../assets/img/case-studies-1-400x450.jpg" alt="case1-img">
-          </div>
-          <h3>How Spaces attracted five million visitors by improving the content</h3>
-          <h2>200%</h2>
-          <p>Higher revenue from digital</p>
+       <div v-for="(item, index) in cases" :key="index" 
+            class="inner-container-case">
+            <div v-if="(index < 3)" class="inside-case">
+                <div class="img-cases">
+                  <img :src="item.img" :alt="item.comment">
+                </div>
+                <h3> {{item.title}} </h3>
+                <h2> {{item.bigNumber}} </h2>
+                <p> {{item.comment}} </p>
+            </div>
+         
        </div>
-       <div class="inner-container-case">
-          <div class="img-cases">
-           <img src="../assets/img/case-studies-4-400x450.jpg" alt="case1-img">
-          </div>
-          <h3>Creativity helped Hemisferio to increase their brand reach vertically</h3>
-          <h2>10x</h2>
-          <p>Sales increase with the same ad spend</p>
-       </div>
-       <div class="inner-container-case">
-          <div class="img-cases">
-           <img src="../assets/img/case-studies-6-400x450.jpg" alt="case1-img">
-          </div>
-          <h3>How DigitalBox used AI-powered data insight to boost sales</h3>
-          <h2>3-year</h2>
-          <p>Partnership with Avada Consultant</p>
-       </div>  
-
      </div>
       
       <div class="button-container text-center">
@@ -46,7 +32,41 @@
 
 <script>
 export default {
- name: 'CaseStudios'
+ name: 'CaseStudios',
+
+   data(){
+   return{
+     cases:[
+       {
+         img: require("../assets/img/case-studies-1-400x450.jpg"),
+         title: 'How Spaces attracted five million visitors by improving the content',
+         bigNumber: '200%',
+         comment: 'Higher revenue from digital'
+       },
+       {
+         img: require("../assets/img/case-studies-4-400x450.jpg"),
+         title: 'Creativity helped Hemisferio to increase their brand reach vertically',
+         bigNumber: '10x',
+         comment: 'Sales increase with the same ad spend'
+       },
+       {
+         img: require("../assets/img/case-studies-6-400x450.jpg"),
+         title: 'How DigitalBox used AI-powered data insight to boost sales',
+         bigNumber: '3-year',
+         comment: 'Partnership with Avada Consultant'
+       },
+       {
+         img: require("../assets/img/case-studies-5-400x450.jpg"),
+         title: 'How DigitalBox used AI-powered data insight to boost sales',
+         bigNumber: '3-year',
+         comment: 'Partnership with Avada Consultant'
+       },
+     
+     ]
+   }
+ }
+
+
 }
 </script>
 

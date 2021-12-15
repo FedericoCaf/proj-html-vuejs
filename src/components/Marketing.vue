@@ -23,33 +23,18 @@
        
        <div class="row img-blog-section">
 
-         <div class="col-4">
+         <div v-for="(article, index) in articles" :key="index" class="col-4">
            <div class="marketing-img">
-             <img src="../assets/img/blog-posts-6-400x267.jpg" alt="img-blog">
+             <img :src="article.img" :alt="article.title">
            </div>
-           <h3>Marketing Tips And Tricks For Your Website</h3>
+           <h3> {{article.title}} </h3>
          </div>
-         <div class="col-4">
-           <div class="marketing-img">
-             <img src="../assets/img/blog-posts-6-400x267.jpg" alt="img-blog">
-           </div>
-           <h3>Marketing Tips And Tricks For Your Website</h3>
-         </div>
-         <div class="col-4">
-           <div class="marketing-img">
-             <img src="../assets/img/blog-posts-6-400x267.jpg" alt="img-blog">
-           </div>
-           <h3>Marketing Tips And Tricks For Your Website</h3>
-         </div>
-      
+
        </div>
 
 
     </div>
   </div>
-
-
-
 
  </div>
 
@@ -59,7 +44,28 @@
 
 <script>
 export default {
- name: 'Marketing'
+ name: 'Marketing',
+
+   data(){
+   return{
+     articles:[
+       {
+         img: require("../assets/img/blog-posts-6-400x267.jpg"),
+         title: 'Marketing Tips And Tricks For Your Website',
+       },
+       {
+         img: require("../assets/img/blog-posts-5-400x267.jpg"),
+         title: 'How to Write Stunning Blog Post Titles',
+       },
+       {
+         img: require("../assets/img/blog-posts-4-400x267.jpg"),
+         title: 'Techniques to Reduce Facebook Ads Spend',
+       },
+   
+     ]
+   }
+ }
+
 }
 </script>
 

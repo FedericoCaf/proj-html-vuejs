@@ -1,49 +1,23 @@
 <template>
 
   <div class="container">
-    <div class="row">
-      <div class="col-6 svg-container">
-        <img src="../assets/svg/img1.svg" alt="svg-img">
+
+    <div v-for="(item, index) in svgContent" :key="index" class="row">
+      <div v-if="(index % 2 === 0)" class="col-6 svg-container">
+        <img :src="(item.img)" :alt="item.topTitle">
       </div>
       <div class="col-6 text-container">
           <h5>
             <i class="fas fa-circle fc-blue"></i> 
-            Business Growth
+            {{item.topTitle}}
           </h5>
-          <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem
+          <h1> {{item.title}} </h1>
+          <p> {{item.paragraph}}
           </p>
-          <button class="fc-button-orange">Get a consultation</button>
+          <button class="fc-button-orange"> {{item.button}} </button>
       </div>
-    </div>
-    <div class="row">
-       <div class="col-6 text-container">
-         <h5>
-            <i class="fas fa-circle fc-yellow"></i> 
-            Business Growth
-          </h5>
-          <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem.
-          </p>
-          <button class="fc-button-orange">Get a consultation</button>
-       </div>
-       <div class="col-6 svg-container">
-          <img src="../assets/svg/img2.svg" alt="svg-img">
-       </div>      
-    </div>
-    <div class="row">
-       <div class="col-6 svg-container">
-         <img src="../assets/svg/img3.svg" alt="svg-img">
-       </div>
-      <div class="col-6 text-container">
-         <h5>
-            <i class="fas fa-circle fc-green"></i> 
-            Business Growth
-          </h5>
-          <h1>Increase Brand Awareness</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias reiciendis cum, quos in incidunt at temporibus laboriosam exercitationem.
-          </p>
-          <button class="fc-button-orange">Get a consultation</button>
+      <div v-if="(index % 2 !== 0)" class="col-6 svg-container">
+        <img :src="(item.img)"  :alt="item.topTitle">
       </div>
     </div>
 
@@ -53,7 +27,35 @@
 
 <script>
 export default {
-  name: 'Svgsection'
+  name: 'Svgsection',
+
+   data(){
+   return{
+     svgContent:[
+       {
+         img: require('../assets/svg/img1.svg'),
+         topTitle: 'Business Growth',
+         title: 'Increase Brand Awarness',
+         paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor placerat luctus. Nullam sit amet ante sed orci convallis gravida et at massa.',
+         button: 'Get a Consultation'
+       },
+       {
+         img: require('../assets/svg/img2.svg'),
+         topTitle: 'Investors In People',
+         title: 'In-House Sales Training',
+         paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor placerat luctus. Nullam sit amet ante sed orci convallis gravida et at massa.',
+         button: 'Get a Consultation'
+       },
+       {
+         img: require('../assets/svg/img3.svg'),
+         topTitle: 'Social Media Analysis',
+         title: 'Harness Your Social Proof',
+         paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor placerat luctus. Nullam sit amet ante sed orci convallis gravida et at massa.',
+         button: 'Get a Consultation'
+       },
+     ]
+   }
+ }
 
 }
 
@@ -66,7 +68,7 @@ export default {
 
 .svg-container{
   height: 600px;
-  margin-top: 100px;
+  margin-top: 70px;
   // background-color: lightskyblue;
    img{
      height: 100%;

@@ -4,12 +4,8 @@
     <h1>Some Brands We Work With</h1>
     <h4>Lorem ipsum dolor, sit amet consectetur adipisicing.</h4>
     <div class="brands-container d-flex justify-content-between">
-        <img src="../assets/img/abstract.png" alt="logo">
-        <img src="../assets/img/cglobal.png" alt="logo">
-        <img src="../assets/img/next.png" alt="logo">
-        <img src="../assets/img/hemisferio.png" alt="logo">
-        <img src="../assets/img/spaces.png" alt="logo">
-        <img src="../assets/img/digitalbox.png" alt="logo">
+        <img v-for="(brand, index) in brands" :key="index" 
+             :src="brand" alt="logo">
     </div>
     <div class="contact-sandy d-flex justify-content-around align-items-center">
       <div class="sandy-container d-flex align-items-center">
@@ -27,14 +23,28 @@
       <button class="btn-free-quote">(555) 802-1234</button>
     </div> 
 
-
  </div>
   
 </template>
 
 <script>
 export default {
- name: 'Brands'
+ name: 'Brands',
+
+ data(){
+   return{
+     brands:[
+       require("../assets/img/abstract.png"),
+       require("../assets/img/cglobal.png"),
+       require("../assets/img/next.png"),
+       require("../assets/img/hemisferio.png"),
+       require("../assets/img/spaces.png"),
+       require("../assets/img/digitalbox.png")
+     ]
+   }
+ }
+
+
 }
 </script>
 
@@ -63,6 +73,13 @@ export default {
       font-size: 22px;
       margin-bottom: 0 !important;
     }
+    .btn-free-quote{
+      height: 50px;
+    }
+    .btn-free-quote:hover{
+          background-color: $primary-color;
+          color: white;
+        }
 
     .sandy-container{
       height: 100%;

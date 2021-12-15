@@ -7,12 +7,19 @@
       </div>
 
       <ul class="d-flex align-items-center justify-content-between">
-        <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i> </li>
+        <li :class="{active: index===0}"
+         v-for="(item, index) in menu" :key="index">
+          <a href="#">
+            {{item}}
+          </a>
+           <i v-if="(index < 2)" class="fas fa-chevron-down"></i>
+        </li>
+        <!-- <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i> </li>
         <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i></li>
         <li> <a href=""> ciao </a> </li>
         <li> <a href=""> ciao </a> </li>
         <li> <a href=""> ciao </a> </li>
-        <li> <a href=""> ciao </a> </li>
+        <li> <a href=""> ciao </a> </li> -->
       </ul>
 
       <div class="phone-contact d-flex justify-content-around align-items-center">
@@ -29,8 +36,17 @@
 <script>
 
 export default {
-  name: 'Header'
+  name: 'Header',
+
+ data(){
+   return{
+     menu:['Home', 'Services', 'Why Us', 'Case Studies', 'About', 'Blog']
+   }
+ }
+
 }
+
+
 
 
 </script>
@@ -41,7 +57,7 @@ export default {
 
  header{
    height: 100px;
-   font-size: 23px;
+   font-size: 20px;
      .logo-header{
        height: 100px;
        width: 270px;
@@ -54,14 +70,10 @@ export default {
      .phone-contact{
        height: 100px;
        width: 400px;
-        // .btn-free-quote{
-        //   height: 50%;
-        //   width: 150px;
-        //   border: none;
-        //   border-radius: 5px;
-        //   background-color: lighten( $primary-color, 35% );
-        //   color: $primary-color;
-        // }
+        .btn-free-quote:hover{
+          background-color: $primary-color;
+          color: white;
+        }
         .fa-phone-alt{
           color: $primary-color;
            span{
@@ -77,20 +89,24 @@ export default {
        height: 100px;
        width: calc(100% - 700px);
          li{
-          font-size: 23px;
-          padding-right: 7px;
+          font-size: 18px;
+          padding-right: 8px;
            line-height: 35px;
            border-bottom: 2px solid transparent;
              a{
                text-decoration: none;
                color: black;
-               padding: 15px;
+              //  padding: 10px;
              }
              
              .fa-chevron-down{
                font-size: 12px;
                cursor: pointer;
              }
+         }
+
+         .active{
+           border-bottom: 2px solid $primary-color;
          }
 
          li:hover{

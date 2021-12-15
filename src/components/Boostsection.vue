@@ -60,34 +60,15 @@
      </div>
      
      <div class="row fc-awards">
-       <div class="col-3 text-center">
-          <div class="awards-img">
-             <img src="../assets/img/award-a-200x191.png" alt="award-a">
+
+       <div v-for="(award, index) in awards" :key="index" class="col-3 text-center">
+          <div class="awards-img" :class="award.color">
+             <img :src="award.img" :alt="award.award1">
           </div>
-          <p>Winner Seo Master MAGT</p>
-          <p>Smart Start Award 2017</p>     
+          <p> {{award.award1}} </p>
+          <p>{{award.award2}} </p>     
        </div>
-       <div class="col-3 text-center">
-          <div class="awards-img">
-             <img src="../assets/img/award-a-200x191.png" alt="award-a">
-          </div>
-          <p>Winner Seo Master MAGT</p>
-          <p>Smart Start Award 2017</p>     
-       </div>
-       <div class="col-3 text-center">
-          <div class="awards-img">
-             <img src="../assets/img/award-a-200x191.png" alt="award-a">
-          </div>
-          <p>Winner Seo Master MAGT</p>
-          <p>Smart Start Award 2017</p>     
-       </div>
-       <div class="col-3 text-center">
-          <div class="awards-img">
-             <img src="../assets/img/award-a-200x191.png" alt="award-a">
-          </div>
-          <p>Winner Seo Master MAGT</p>
-          <p>Smart Start Award 2017</p>     
-       </div>
+
      
      </div>
       
@@ -98,7 +79,41 @@
 
 <script>
 export default {
- name: 'Boostsection'
+ name: 'Boostsection',
+
+   data(){
+   return{
+     awards:[
+       {
+         img: require("../assets/img/award-a-200x191.png"),
+         award1: 'Winner Seo Master MAGT',
+         award2: 'Smart Start Award 2017',
+         color: 'color-azure'
+       },
+       {
+         img: require("../assets/img/award-b-200x191.png"),
+         award1: 'Top Social Media Agencies',
+         award2: 'Next Partner 2018',
+         color: 'color-orange'
+       },
+       {
+         img: require("../assets/img/award-c-200x191.png"),
+         award1: '10 Fastest Growing Abstract',
+         award2: 'Solution Providers 2019',
+         color: 'color-red'
+       },
+       {
+         img: require("../assets/img/award-d-200x191.png"),
+         award1: 'National Excellence Agencie',
+         award2: 'Award Winner 2020',
+         color: 'color-blue'
+       },
+      
+     
+     ]
+   }
+ }
+ 
 }
 </script>
 
@@ -164,6 +179,13 @@ export default {
       margin-bottom: 0 !important;
       font-size: 17px;
     }
+    h4{
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    h4:hover{
+      color: $primary-color;
+    }
   }
 }
 
@@ -180,6 +202,18 @@ export default {
 
 .fc-awards{
   margin-top: 70px;
+   .color-azure{
+     filter:hue-rotate(180deg)
+   }
+   .color-orange{
+     filter:hue-rotate(0deg)
+   }
+   .color-red{
+     filter:hue-rotate(340deg)
+   }
+   .color-blue{
+     filter:hue-rotate(210deg)
+   }
 }
 
 </style>

@@ -42,7 +42,8 @@ export default {
 @import '../assets/style/vars.scss';
 
 .container-jumbo{
-  height: 600px;
+  height: 720px;
+  margin-bottom: 50px;
   background-image: url('../assets/img/marketing-intro.jpg');
   background-size:cover;
   background-position: center;
@@ -62,19 +63,25 @@ export default {
      background-color: white;
      color: black;
      padding: 15px;
-     width: 300px;
-     font-size: 25px;
+     width: 200px;
+     font-size: 20px;
+     border: 2px solid white;
+     transition: all 0.3s;
       i{
         margin-left: 5px;
       }
    }
+   .fc-btn-our-services:hover{
+     color: white;
+     background-color: transparent;
+   }
    h1{
-     font-size: 65px;
+     font-size: 70px;
      font-weight: 700;
      color: white;
    }
    h4{
-     font-size: 30px;
+     font-size: 35px;
      margin: 30px 0;
    }
 }
@@ -85,8 +92,8 @@ export default {
 }
 
 .contact-card{
-  height: 540px;
-  width: 390px;
+  height: 640px;
+  width: 460px;
   border-radius: 10px;
   text-align: center;
   padding: 15px;
@@ -94,6 +101,7 @@ export default {
   box-shadow: 10px 10px 30px;
    .fa-phone-alt{
           color: $primary-color;
+          padding-bottom: 25px;
            span{
              padding-left: 5px;
              color: black;
@@ -107,6 +115,8 @@ export default {
     }
     h6{
       color: gray;
+      font-size: 20px;
+      padding: 12px;
     }
    input{
      width: 90%;
@@ -118,7 +128,7 @@ export default {
    }
    .fc-callback{
      width: 90%;
-     margin-top: 20px;
+     margin-top: 40px;
      padding: 10px;
      border: none;
      border-radius: 10px;
@@ -126,7 +136,7 @@ export default {
      color: white;
    }
    .img-card-top{
-     height: 50px;
+     height: 80px;
      width: 100%;
      margin-bottom: 10px;
       img{
