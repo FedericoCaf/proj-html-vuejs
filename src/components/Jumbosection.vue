@@ -1,5 +1,15 @@
 <template>
   <div class="container-jumbo">
+    <div class="fc-demos text-center">
+       <i class="fas fa-th-list"></i>
+       <p>Demos</p>
+    </div>
+    <div class="fc-on-sale text-center">
+       <i> <span> $ </span> 39 </i>
+       <p>On Sale</p>
+    </div>
+ 
+   
       <div class="container">
         <div class="row inner-container d-flex align-items-center">
             <div class="jumbo-left col-6">
@@ -42,6 +52,7 @@ export default {
 @import '../assets/style/vars.scss';
 
 .container-jumbo{
+  position: relative;
   height: 720px;
   margin-bottom: 50px;
   background-image: url('../assets/img/marketing-intro.jpg');
@@ -50,6 +61,41 @@ export default {
   background-color:green;
    .inner-container{
      height: 500px;
+   }
+
+   .fc-demos{
+     position: absolute;
+     cursor: pointer;
+     right: 15px;
+     top:20px;
+     border-radius: 7px;
+     font-size: 12px;
+     width: 60px;
+     height: 60px;
+     background-color: white;
+     padding-top: 9px;
+      i{
+        font-size: 25px;
+      }
+   }
+   .fc-on-sale{
+     position: absolute;
+     cursor: pointer;
+     right: 15px;
+     top:90px;
+     font-size: 12px;
+     border-radius: 7px;
+     width: 60px;
+     height: 60px;
+     background-color: white;
+     padding-top: 7px;
+      i{
+        font-size: 22px;
+        color: #65BC7B;
+      }
+      span{
+        font-size: 12px;
+      }
    }
 }
 

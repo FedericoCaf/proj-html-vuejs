@@ -93,7 +93,17 @@
    </div>
  
  <div class="chat-icon d-flex justify-content-end">
-   <i class="far fa-comment-alt"></i>
+   <div class="text-chat text-center">
+     <div class="img-expert-chat d-flex justify-content-center">   
+         <img src="../assets/img/marketing-expert-cta.png" alt="expert-cta">
+     </div>
+
+     <p>This is a free HubSpot live chat. You can create your own chat flows ad engage your customers with Avada & HubSpot!</p>
+   </div>
+   <div class="container-chat d-flex justify-content-center align-items-center">
+       <i class="fas fa-comment-alt"></i>
+   </div>
+ 
  </div>
 
  </footer>
@@ -207,7 +217,7 @@ export default {
    }
 
     li{
-     font-size: 20px;
+     font-size: 19px;
    }
     li:not(:first-child){
       padding-top: 20px;
@@ -236,11 +246,43 @@ export default {
 }
 
 .chat-icon{
- margin-right: 20px;
+  position: relative;
+  margin-right: 20px;
    i{
-     font-size: 35px;
+     font-size: 32px;
+     color: white;
+   }
+   .text-chat{
+     position: absolute;
+     top:-180px;
+     width: 250px;
+     height: 170px;
+     box-shadow: 15px 15px 30px;
+     border-radius: 5px;
+      p{
+        font-size: 14px;
+        margin-top: -10px;
+        padding: 0px 15px 15px 15px;
+        color: gray;
+      }
    }
 }
 
+.container-chat{
+  width: 70px;
+  height: 70px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.img-expert-chat{
+  width: 100%;
+  height: 65px;
+    img{
+      margin-top: -27px;
+      height: 100%;
+      border-radius: 50%;
+    }
+}
 </style>

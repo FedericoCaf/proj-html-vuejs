@@ -14,12 +14,6 @@
           </a>
            <i v-if="(index < 2)" class="fas fa-chevron-down"></i>
         </li>
-        <!-- <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i> </li>
-        <li> <a href=""> ciao </a> <i class="fas fa-chevron-down"></i></li>
-        <li> <a href=""> ciao </a> </li>
-        <li> <a href=""> ciao </a> </li>
-        <li> <a href=""> ciao </a> </li>
-        <li> <a href=""> ciao </a> </li> -->
       </ul>
 
       <div class="phone-contact d-flex justify-content-around align-items-center">
@@ -45,9 +39,6 @@ export default {
  }
 
 }
-
-
-
 
 </script>
 
@@ -88,14 +79,17 @@ export default {
       //  background-color: crimson;
        height: 100px;
        width: calc(100% - 700px);
+       margin-bottom: 0 !important;
          li{
           font-size: 18px;
           padding-right: 8px;
            line-height: 35px;
            border-bottom: 2px solid transparent;
+           transition: all 0.5s;
              a{
                text-decoration: none;
                color: black;
+               transition: all 0.5s;
               //  padding: 10px;
              }
              
