@@ -3,7 +3,7 @@
  <div class="container text-center">
     <h1>Some Brands We Work With</h1>
     <h4>Lorem ipsum dolor, sit amet consectetur adipisicing.</h4>
-    <div class="brands-container d-flex justify-content-between">
+    <div class="brands-container d-flex justify-content-between flex-wrap">
         <img v-for="(brand, index) in brands" :key="index" 
              :src="brand" alt="logo">
     </div>
@@ -67,7 +67,7 @@ export default {
  .contact-sandy{
    margin-top: 200px;
    height: 70px;
-   box-shadow: 10px 10px 30px;
+   box-shadow: 5px 10px 18px #888888;
    border-radius: 10px;
     .subtitle-avada{
       font-size: 22px;
@@ -101,15 +101,23 @@ export default {
       }
       h6{
         color: gray;
-      }
-    
+      } 
     }
-    
  }
-
 
 }
 
+@media (max-width:992px){
+   .sandy-text{
+      h6{
+        display: none;
+      }
+   }
+
+   .subtitle-avada{
+     display: none;
+   }
+}
 
 
 </style>

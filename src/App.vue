@@ -53,4 +53,23 @@ export default {
 @import './assets/style/vars.scss';
 @import './assets/style/generals.scss';
 
+.jumbo-left, .jumbo-right{
+    animation: transitionIn 3s;
+  }
+  
+  @keyframes transitionIn {
+  
+    from {
+      transform: translateY(15px);
+      filter: opacity(0);
+   
+    }
+  
+    to {
+      transform: translateY(0);
+      filter: opacity(1)
+    }
+    
+  }
+
 </style>

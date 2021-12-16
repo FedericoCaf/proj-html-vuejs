@@ -6,19 +6,18 @@
     </div>
 
      <div class="container-cases d-flex justify-content-between">
-
+<!-- ciclo i casi studio presenti nell'array ma inserisco solo i primi 3 con un controllo v-if -->
        <div v-for="(item, index) in cases" :key="index" 
             class="inner-container-case">
-            <div v-if="(index < 3)" class="inside-case">
-              <div class="fc-overlay"></div>
+             <div v-if="(index < 3)" class="inside-case">
+               <div class="fc-overlay"></div>
                 <div class="img-cases">
                   <img :src="item.img" :alt="item.comment">
                 </div>
                 <h3> {{item.title}} </h3>
                 <h2> {{item.bigNumber}} </h2>
                 <p> {{item.comment}} </p>
-            </div>
-         
+             </div>       
        </div>
      </div>
       
@@ -83,7 +82,7 @@ export default {
   }
 
   .inner-container-case{
-    max-width: 400px;
+
     h3{
       margin-top: 20px;
       font-size: 30px;
@@ -99,6 +98,7 @@ export default {
       font-size: 52px;
     }
   }
+   
 
   .button-container{
     margin-top: 50px;
@@ -132,4 +132,17 @@ export default {
 
 }
 
+@media (max-width:1200px){
+  .container-cases{
+    flex-wrap: wrap;
+    max-width: 400px;
+    justify-content: center;
+  }
+
+  .case-studies-container{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+  }
+}
 </style>

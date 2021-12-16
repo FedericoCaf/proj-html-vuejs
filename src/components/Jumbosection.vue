@@ -12,12 +12,12 @@
    
       <div class="container">
         <div class="row inner-container d-flex align-items-center">
-            <div class="jumbo-left col-6">
+            <div class="jumbo-left col-12 col-md-6">
               <h1>Unlock Your Online Growth Potential</h1>
               <h4>Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.</h4>
               <button class="fc-btn-our-services">Our Services <i class="fas fa-arrow-right"></i> </button>
             </div>
-            <div class="jumbo-right col-6">
+            <div class="jumbo-right col-12 col-md-6">
                <div class="contact-card">
                  <div class="img-card-top">
                     <img src="../assets/img/marketing-consultant-expert.jpg" alt="consultant">
@@ -58,7 +58,6 @@ export default {
   background-image: url('../assets/img/marketing-intro.jpg');
   background-size:cover;
   background-position: center;
-  background-color:green;
    .inner-container{
      height: 500px;
    }
@@ -190,6 +189,61 @@ export default {
         border-radius: 50%;
       }
    }
+}
+
+//aggiungo media query per il responsive
+@media (max-width:1200px){
+  .fc-on-sale{
+    display: none;
+  }
+  .fc-demos{
+    display: none;
+  }
+
+   .jumbo-right{
+   padding-left: 0;
+   display: flex;
+   justify-content: center;  
+ }
+
+ .jumbo-left{
+   text-align: center;
+    h1{
+      padding-top: 15px;
+    }
+ }
+
+}
+@media (max-width:992px){
+  .contact-card{
+    height: 440px;
+    width:300px;
+       input{
+         padding: 10px; 
+         margin: 2px;        
+        }
+       .fc-callback{
+         margin-top: 10px;
+        padding: 5px;
+       }
+      h6{    
+        font-size: 15px;
+        padding: 3px;
+      }
+  }
+
+.jumbo-left{
+    h1{
+      font-size: 50px;
+    }
+     h4{
+     font-size: 20px;
+     margin: 15px 0;
+   }
+}
+
+
+  
 }
 
 </style>

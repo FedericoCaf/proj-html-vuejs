@@ -2,11 +2,11 @@
  <div class="wrapper">
      <div class="container">
       <div class="row d-flex">
-         <div class="col-6 img-testimonial">
+         <div class="col-md-6 col-12 img-testimonial">
            <img src="../assets/img/large-testimonial-600x583.jpg" alt="img-testimonial">
          </div>
 
-          <div class="col-6 text-testimonial">
+          <div class="col-md-6 col-12 text-testimonial">
               <h2>“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</h2>
               <h5>Kate Schadler</h5>
               <p>Marketing Consultant – Abstract</p>            
@@ -23,7 +23,7 @@
        
        <div class="row img-blog-section">
 
-         <div v-for="(article, index) in articles" :key="index" class="col-4">
+         <div v-for="(article, index) in articles" :key="index" class="col-xl-4 col-12">
            <div class="marketing-img">
              <div class="fc-overlay"></div>
              <img :src="article.img" :alt="article.title">
@@ -77,6 +77,7 @@ export default {
   padding: 60px 0;
    img{
      border-radius: 10px;
+     width: 100%;
    }
 }
 
@@ -135,4 +136,40 @@ export default {
   padding: 150px 0;
 }
 
+@media (max-width:1200px){
+  .text-testimonial{
+    padding: 50px;
+   h2{
+     margin-bottom: 35px;
+     font-size: 25px;
+   }
+ }
+
+ .marketing-title{
+   h2{ 
+     font-size: 40px;
+   }
+   .fc-button-orange{  
+     margin-top: 60px;
+   }
+ }
+}
+@media (max-width:768px){
+ .marketing-title{
+   h2{ 
+     font-size: 25px;
+   }
+   .fc-button-orange{  
+     margin-top: 40px;
+     width: 200px;
+     font-size: 16px;
+   }
+ }
+}
+
+@media (max-width:1200px){
+  .img-blog-section{
+    max-width: 400px;
+  }
+}
 </style>

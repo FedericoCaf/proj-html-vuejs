@@ -2,18 +2,18 @@
 <div class="container-global-boost bg-light">
   <div class="container">
      <div class="row d-flex">
-       <div class="col-6 text-boost">
+       <div class="col-12 col-md-6 text-boost">
          <h1>We Boost Our Clients’ Bottom Line by Optimizing Their Growth Potential.</h1>
          <p>Quisque aliquet, libero consequat elementum convallis, erat risus imperdiet pellentesque sem neque eget.</p>
          <button class="fc-button-orange">Why Work With Us</button>
        </div>
-       <div class="col-6 img-boost">
+       <div class="col-12 col-md-6 img-boost">
          <img src="../assets/img/we-boost-our-clients-600x549.jpg" alt="img-work">
        </div>
      </div>
 
      <div class="row d-flex boost-bottom-content">
-       <div class="col-6">
+       <div class="col-12 col-md-6">
 
          <h3>We Build Relationships</h3>
          <p class="boost-paragraph">Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer consectetur.</p>
@@ -22,7 +22,7 @@
          <p class="boost-paragraph">Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer consectetur.</p>
 
        </div>
-       <div class="col-6">
+       <div class="col-12 col-md-6">
 
          <div class="boost-bottom-right d-flex">
            <div class="fc-icon d-flex justify-content-center align-items-center">
@@ -61,7 +61,8 @@
      
      <div class="row fc-awards">
 
-       <div v-for="(award, index) in awards" :key="index" class="col-3 text-center">
+       <div v-for="(award, index) in awards" :key="index" class="col-md-3 col-6 text-center">
+      <!-- aggiungo dinamicamente il colore corrispondente col bind della classe -->
           <div class="awards-img" :class="award.color">
              <img :src="award.img" :alt="award.award1">
           </div>
@@ -136,10 +137,12 @@ export default {
     width: 200px;
     padding: 15px;
     font-size: 17px;
+    margin-bottom: 20px;
   }
 }
 
 .img-boost{
+
   img{
     width: 100%;
     border-radius: 5px;
@@ -215,5 +218,36 @@ export default {
      filter:hue-rotate(210deg)
    }
 }
+
+@media (max-width:1200px){
+  .text-boost{
+    margin-top: 50px;
+    padding-right: 90px;
+   h1{
+    font-size: 35px;
+    font-weight: 700;
+   }
+   .fc-button-orange{
+      width: 200px;
+      padding: 15px;
+      font-size: 15px;
+   }
+  } 
+ }
+@media (max-width:768px){
+  .text-boost{
+    margin-top: 0;
+    padding-right: 70px;
+   h1{
+    font-size: 25px;
+    font-weight: 700;
+   }
+   .fc-button-orange{
+      width: 200px;
+      padding: 15px;
+      font-size: 15px;
+   }
+  } 
+ }
 
 </style>
